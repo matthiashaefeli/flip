@@ -1,0 +1,5 @@
+<h1>Project types</h1>
+<%= link_to 'new', new_project_type_path %>
+<% @project_types.each do |pt| %>
+  <p><%= link_to pt.name, project_type_path(pt) %></p>
+<% end %>
