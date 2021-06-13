@@ -1,5 +1,6 @@
 <p>Name: <%= @project.name %></p>
 <p>Type: <%= @project.project_type.name %></p>
 <p>Status: <%= @project.status %></p>
-<%= link_to 'edit', edit_project_path %>
-<%= link_to 'delete', project_path, method: 'delete' %>
+<%= render 'conditions/index' %>
+<%= link_to 'edit project', edit_project_path %>
+<%= link_to 'delete project', project_path, method: 'delete' %>
