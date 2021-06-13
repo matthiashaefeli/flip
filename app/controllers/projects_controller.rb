@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
+
   def index
     @projects = Project.order(:name)
   end
@@ -8,21 +10,20 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    @project = Project.find(params[:id])
-      if @project.update_attributes(params[:project])
-        flash[:success] = "Object was successfully updated"
-        redirect_to @project
-      else
-        flash[:error] = "Something went wrong"
-        render 'edit'
-      end
+    if @project.update(project_params)
+      flash[:success] = "Object was successfully updated"
+      redirect_to projects_path
+    else
+      flash[:error] = "Something went wrong"
+      render 'edit'
+    end
   end
 
   def create
-    @project = Project.new(params[:project])
+    @project = Project.new(project_params)
     if @project.save
       flash[:success] = "Object successfully created"
-      redirect_to @project
+      redirect_to projects_path
     else
       flash[:error] = "Something went wrong"
       render 'new'
@@ -30,7 +31,6 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:id])
     if @project.destroy
       flash[:success] = 'project was successfully deleted.'
       redirect_to projects_url
@@ -38,5 +38,15 @@ class ProjectsController < ApplicationController
       flash[:error] = 'Something went wrong'
       redirect_to projects_url
     end
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(:name, :project_type_id)
+  end
+
+  def set_project
+    @project = Project.find(params[:id])
   end
 end

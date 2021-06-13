@@ -13,7 +13,7 @@ class ProjectTypesController < ApplicationController
     @project_type = ProjectType.new(project_type_params)
     if @project_type.save
       flash[:success] = "Object successfully created"
-      redirect_to @project_type
+      redirect_to project_types_path
     else
       flash[:error] = "Something went wrong"
       render 'new'
@@ -21,9 +21,9 @@ class ProjectTypesController < ApplicationController
   end
 
   def update
-    if @project_type.update_attributes(params[:project_type])
+    if @project_type.update(project_type_params)
       flash[:success] = "Object was successfully updated"
-      redirect_to @project_type
+      redirect_to project_types_path
     else
       flash[:error] = "Something went wrong"
       render 'edit'
