@@ -1,0 +1,24 @@
+<h1>Providers</h1>
+<%= link_to 'new provider', new_provider_path %>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Tel1</td>
+      <td>Tel2</td>
+      <td>Tel3</td>
+      <td>Address</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @providers.each do |provider| %>
+    <tr>
+      <td><%= link_to provider.name, provider_path(provider) %></td>
+      <td><%= provider.telephone1 %></td>
+      <td><%= provider.telephone2 %></td>
+      <td><%= provider.telephone1 %></td>
+      <td><%= provider.address %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
