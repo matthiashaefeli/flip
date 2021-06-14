@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :project_types
   resources :projects
   resources :conditions
+  resources :providers
   root 'home#index'
 end
