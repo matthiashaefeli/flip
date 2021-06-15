@@ -11,14 +11,14 @@
     </tr>
   </thead>
   <tbody>
-  <% @vendors.each do |vendor| %>
-    <tr>
-      <td><%= link_to vendor.name, vendor_path(vendor) %></td>
-      <td><%= vendor.telephone1 %></td>
-      <td><%= vendor.telephone2 %></td>
-      <td><%= vendor.telephone1 %></td>
-      <td><%= vendor.address %></td>
-    </tr>
-  <% end %>
+    <% @vendors.each do |vendor| %>
+      <tr>
+        <td><%= link_to vendor.name, vendor_path(vendor) %></td>
+        <td><%= vendor.telephone1 %></td>
+        <td><%= vendor.telephone2 %></td>
+        <td><%= vendor.telephone1 %></td>
+        <td><%= vendor.address %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
