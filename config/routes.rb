@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :projects
   resources :conditions
   resources :providers
+  resources :finances
   root 'home#index'
 end
