@@ -1,0 +1,22 @@
+<p>Finance:</p>
+<p><%= link_to 'New Finance', new_finance_path(project: @project) %></p>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Type</td>
+      <td>Edit</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <% @project.finances.each do |finance| %>
+      <td><%= finance.name %></td>
+      <td><%= finance.ftype %></td>
+      <td><%= link_to 'edit', edit_finance_path(finance) %></td>
+      <td><%= link_to 'delete', finance_path(finance), method: "delete" %></td>
+    <% end %>
+    </tr>
+  </tbody>
+</table>

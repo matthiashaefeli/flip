@@ -1,10 +1,6 @@
 class ConditionsController < ApplicationController
   before_action :set_condition, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @conditions = Condition.order(:name)
-  end
-
   def new
     @project = Project.find(params[:project])
     @condition = Condition.new
@@ -39,13 +35,12 @@ class ConditionsController < ApplicationController
   def update
     if @condition.update(condition_params)
       flash[:success] = "condition was successfully updated"
-      redirect_to conditions_path
+      redirect_to project_path(project)
     else
       flash[:error] = "Something went wrong"
       render 'edit'
     end
   end
-  
 
   private
 
