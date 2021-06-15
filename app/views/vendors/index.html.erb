@@ -1,0 +1,24 @@
+<h1>Vendors</h1>
+<%= link_to 'new vendor', new_vendor_path %>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Tel1</td>
+      <td>Tel2</td>
+      <td>Tel3</td>
+      <td>Address</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @vendors.each do |vendor| %>
+    <tr>
+      <td><%= link_to vendor.name, vendor_path(vendor) %></td>
+      <td><%= vendor.telephone1 %></td>
+      <td><%= vendor.telephone2 %></td>
+      <td><%= vendor.telephone1 %></td>
+      <td><%= vendor.address %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :conditions
   resources :providers
   resources :finances
+  resources :vendors
   root 'home#index'
 end

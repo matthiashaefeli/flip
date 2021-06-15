@@ -30,6 +30,16 @@ class ProvidersController < ApplicationController
     end
   end
 
+  def update
+    if @provider.update(provider_params)
+      flash[:success] = "Provider was successfully updated"
+      redirect_to providers_path
+    else
+      flash[:error] = "Something went wrong"
+      render 'edit'
+    end
+  end
+
   private
 
   def provider_params
