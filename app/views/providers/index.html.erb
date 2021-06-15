@@ -11,14 +11,14 @@
     </tr>
   </thead>
   <tbody>
-  <% @providers.each do |provider| %>
-    <tr>
-      <td><%= link_to provider.name, provider_path(provider) %></td>
-      <td><%= provider.telephone1 %></td>
-      <td><%= provider.telephone2 %></td>
-      <td><%= provider.telephone1 %></td>
-      <td><%= provider.address %></td>
-    </tr>
-  <% end %>
+    <% @providers.each do |provider| %>
+      <tr>
+        <td><%= link_to provider.name, provider_path(provider) %></td>
+        <td><%= provider.telephone1 %></td>
+        <td><%= provider.telephone2 %></td>
+        <td><%= provider.telephone1 %></td>
+        <td><%= provider.address %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
