@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.integer :project_type_id
       t.string :name
       t.integer :status
+      t.string :address
 
       t.timestamps
     end
