@@ -1,0 +1,9 @@
+<%= form_with model: @lender do |form| %>
+  <%= form.text_field :name, placeholder: 'name' %>
+  <%= form.text_field :telephone1, placeholder: 'telephone1' %>
+  <%= form.text_field :telephone2, placeholder: 'telephone2' %>
+  <%= form.text_field :telephone3, placeholder: 'telephone3' %>
+  <%= form.text_field :address, placeholder: 'address' %>
+  <%= form.select(:ltype, Lender.ltypes.keys) %>
+  <%= form.submit %>
+<% end %>

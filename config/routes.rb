@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :finances
   resources :vendors
   resources :realtors
+  resources :lenders
   root 'home#index'
 end
