@@ -1,0 +1,8 @@
+<h1><%= @lender.name %></h1>
+<p>Address: <%= @lender.address %></p>
+<p>Telephone1: <%= @lender.telephone1 %></p>
+<p>Telephone2: <%= @lender.telephone2 %></p>
+<p>Telephone3: <%= @lender.telephone3 %></p>
+<p>Type: <%= @lender.ltype %></p>
+<%= link_to 'edit', edit_lender_path(@lender) %>
+<%= link_to 'delete', lender_path(@lender), method: 'delete' %>
