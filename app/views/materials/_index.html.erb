@@ -1,0 +1,22 @@
+<h1>Material</h1>
+<%= link_to 'new material', new_material_path(project: @project) %>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Quantity</td>
+      <td>Ordered</td>
+      <td>Received</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @project.materials.each do |material| %>
+      <tr>
+        <td><%= link_to material.name, material_path(material) %></td>
+        <td><%= material.quantity %></td>
+        <td><%= material.ordered %></td>
+        <td><%= material.received %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

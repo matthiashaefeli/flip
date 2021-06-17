@@ -33,6 +33,7 @@ class ConditionsController < ApplicationController
   end
 
   def update
+    project = @condition.project
     if @condition.update(condition_params)
       flash[:success] = "condition was successfully updated"
       redirect_to project_path(project)

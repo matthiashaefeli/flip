@@ -1,0 +1,6 @@
+<h1><%= @material.name %></h1>
+<p>Quatanty: <%= @material.quantity %></p>
+<p>Ordered: <%= @material.ordered %></p>
+<p>Received: <%= @material.received %></p>
+<%= link_to 'edit', edit_material_path(@material) %>
+<%= link_to 'delete', material_path(@material), method: 'delete' %>

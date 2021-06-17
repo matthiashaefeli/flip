@@ -1,0 +1,8 @@
+<%= form_with model: @material do |form| %>
+  <%= form.text_field :name, placeholder: 'name' %>
+  <%= form.number_field :quantity, placeholder: 'quantity' %>
+  <%= form.date_field :ordered %>
+  <%= form.date_field :received %>
+  <%= form.submit %>
+  <%= form.hidden_field :project_id, value: @project.id %>
+<% end %>
