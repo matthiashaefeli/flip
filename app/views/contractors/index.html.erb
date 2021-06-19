@@ -1,0 +1,24 @@
+<h1>Contractor</h1>
+<%= link_to 'new Contractor', new_contractor_path %>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Tel1</td>
+      <td>Tel2</td>
+      <td>Tel3</td>
+      <td>Address</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contractors.each do |contractor| %>
+      <tr>
+        <td><%= link_to contractor.name, contractor_path(contractor) %></td>
+        <td><%= contractor.telephone1 %></td>
+        <td><%= contractor.telephone2 %></td>
+        <td><%= contractor.telephone3 %></td>
+        <td><%= contractor.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
