@@ -1,0 +1,7 @@
+<br>
+<p>Name: <%= @condition.name %></p>
+<p>Initial Condition: <%= @condition.initial_condition %></p>
+<p>Status: <%= @condition.status %></p>
+
+<p><%= link_to 'edit', edit_condition_path(@condition) %></p>
+<p><%= link_to 'delete', condition_path(@condition), method: "delete" %></p>

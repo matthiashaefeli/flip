@@ -13,11 +13,9 @@
   <tbody>
     <tr>
     <% @project.conditions.each do |condition| %>
-      <td><%= condition.name %></td>
+      <td><%= link_to condition.name, condition_path(condition) %></td>
       <td><%= condition.status %></td>
       <td><%= condition.initial_condition %></td>
-      <td><%= link_to 'edit', edit_condition_path(condition) %></td>
-      <td><%= link_to 'delete', condition_path(condition), method: "delete" %></td>
     <% end %>
     </tr>
   </tbody>

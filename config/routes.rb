@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :realtors
   resources :lenders
   resources :materials
+  resources :contractors
   root 'home#index'
 end
