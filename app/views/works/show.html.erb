@@ -4,3 +4,6 @@
 <p>Status: <%= @work.status %></p>
 <p>Started at: <%= @work.started_at %></p>
 <p>Finished at: <%= @work.finished_at %></p>
+
+<p><%= link_to 'Edit', edit_work_path(@work) %></p>
+<p><%= link_to 'Delete', work_path(@work), method: 'delete' %></p>
