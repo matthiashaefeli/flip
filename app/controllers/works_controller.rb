@@ -6,8 +6,11 @@ class WorksController < ApplicationController
     @work = Work.new
   end
 
+  def edit
+    @condition = @work.condition
+  end
+
   def create
-    binding.pry
     @work = Work.new(work_params)
     if @work.save
       flash[:success] = "Work successfully created"
@@ -15,6 +18,28 @@ class WorksController < ApplicationController
     else
       flash[:error] = "Something went wrong"
       render 'new'
+    end
+  end
+
+  def update
+    condition = @work.condition
+    if @work.update(work_params)
+      flash[:success] = "work was successfully updated"
+      redirect_to condition_path(condition)
+    else
+      flash[:error] = "Something went wrong"
+      render 'edit'
+    end
+  end
+
+  def destroy
+    condition = @work.condition
+    if @work.destroy
+      flash[:success] = 'condtition was successfully deleted.'
+      redirect_to condition_path(condition)
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to condition_path(condition)
     end
   end
 
