@@ -1,0 +1,6 @@
+<p>Condition: <%= @work.condition.name %></p>
+<p>Name: <%= @work.name %></p>
+<p>Contractor: <%= link_to @work.contractor.name, contractor_path(@work.contractor) %></p>
+<p>Status: <%= @work.status %></p>
+<p>Started at: <%= @work.started_at %></p>
+<p>Finished at: <%= @work.finished_at %></p>

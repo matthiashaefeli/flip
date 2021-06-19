@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :lenders
   resources :materials
   resources :contractors
+  resources :works
   root 'home#index'
 end
