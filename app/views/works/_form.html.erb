@@ -1,0 +1,7 @@
+<%= form_with model: @work do |form| %>
+  <%= form.text_field :name, placeholder: 'name' %>
+  <%= form.collection_select(:contractor_id, Contractor.all, :id, :name) %>
+  <%= form.select(:status, Work.statuses.keys) %>
+  <%= form.submit %>
+  <%= form.hidden_field :condition_id, value: @condition.id %>
+<% end %>
