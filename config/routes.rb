@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   resources :materials
   resources :contractors
   resources :works
+  resources :data_managers, only: [:index]
   root 'home#index'
 end

@@ -1,17 +1,9 @@
-// Place all the styles related to the projects controller here.
+// Place all the styles related to the data_managers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.project_home {
+.data_manager {
   text-align: center;
-}
-
-.project_form {
-  width: 50vw;
   margin: auto;
   display: flex;
   flex-direction: column;
-
-  div {
-    text-align: left;
-  }
 }

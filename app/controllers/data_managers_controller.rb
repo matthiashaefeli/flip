@@ -1,0 +1,2 @@
+class DataManagersController < ApplicationController
+end
