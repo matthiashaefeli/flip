@@ -1,17 +1,3 @@
-<br/>
-<br/>
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.|
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%#= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-
-<p><%= link_to 'Project Types', project_types_path %></p>
-<p><%= link_to 'Projects', projects_path %></p>
-<p><%= link_to 'Providers', providers_path %></p>
-<p><%= link_to 'Contractors', contractors_path %></p>
-<p><%= link_to 'Vendors', vendors_path %></p>
-<p><%= link_to 'Realtors', realtors_path %></p>
-<p><%= link_to 'Lenders', lenders_path %></p>
+<div class='home'>
+  <h1 class='home_title'>CFAI Manager</h1>
+</div>

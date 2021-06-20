@@ -1,5 +1,7 @@
-<h1>Projects</h1>
-<p><%= link_to 'new', new_project_path %></p>
-<% @projects.each do |project| %>
-  <p><%= link_to project.name, project_path(project) %> <%= project.status %></p>
-<% end %>
+<div class='project_home'>
+  <h1>Projects</h1>
+  <p><%= link_to 'new', new_project_path %></p>
+  <% @projects.each do |project| %>
+    <p><%= link_to project.name, project_path(project) %> <%= project.status %></p>
+  <% end %>
+</div>

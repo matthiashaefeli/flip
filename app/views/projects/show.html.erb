@@ -1,9 +1,11 @@
-<p>Name: <%= @project.name %></p>
-<p>Type: <%= @project.project_type.name %></p>
-<p>Address: <%= @project.address %></p>
-<p>Status: <%= @project.status %></p>
-<%= render 'conditions/index' %>
-<%= render 'finances/index' %>
-<%= render 'materials/index' %>
-<%= link_to 'edit project', edit_project_path %>
-<%= link_to 'delete project', project_path, method: 'delete' %>
+ <div class='project_home'> 
+  <p>Name: <%= @project.name %></p>
+  <p>Type: <%= @project.project_type.name %></p>
+  <p>Address: <%= @project.address %></p>
+  <p>Status: <%= @project.status %></p>
+  <%= render 'conditions/index' %>
+  <%= render 'finances/index' %>
+  <%= render 'materials/index' %>
+  <%= link_to 'edit project', edit_project_path %>
+  <%= link_to 'delete project', project_path, method: 'delete' %>
+</div>

@@ -1,7 +1,9 @@
-<%= form_with model: @project do |form| %>
-  <%= form.text_field :name, placeholder: 'Name' %>
-  <%= form.text_area :address, placeholder: 'Address' %>
-  <%= form.collection_select(:project_type_id, ProjectType.all, :id, :name) %>
-  <%= form.select(:status, Project.statuses.keys) %>
-  <%= form.submit %>
-<% end %>
+<div class='project_form'>
+  <%= form_with model: @project do |form| %>
+    <div><%= form.text_field :name, placeholder: 'Name' %></div>
+    <div><%= form.text_area :address, placeholder: 'Address' %></div>
+    <div><%= form.collection_select(:project_type_id, ProjectType.all, :id, :name) %></div>
+    <div><%= form.select(:status, Project.statuses.keys) %></div>
+    <div><%= form.submit %></div>
+  <% end %>
+</div>
