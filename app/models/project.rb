@@ -4,4 +4,5 @@ class Project < ApplicationRecord
   has_many :conditions
   has_many :finances
   has_many :materials
+  has_many :comments, :as => :commentable
 end

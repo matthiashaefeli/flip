@@ -3,6 +3,13 @@
   <p>Type: <%= @project.project_type.name %></p>
   <p>Address: <%= @project.address %></p>
   <p>Status: <%= @project.status %></p>
+  <p>Comments and files:</p>
+  <ul>
+    <% @project.comments.each do |comment| %>
+      <li><%= comment.content %></li>
+    <% end %>
+  </ul>
+  <%= render 'comments/form' %>
   <%= render 'conditions/index' %>
   <%= render 'finances/index' %>
   <%= render 'materials/index' %>

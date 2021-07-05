@@ -1,0 +1,8 @@
+<%= form_with model: @comment do |form| %>
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </div>
+  <%= form.submit %>
+  <%= form.hidden_field :project_id, value: @project.id %>
+<% end %>

@@ -40,6 +40,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.new
+  end
+
   private
 
   def project_params
