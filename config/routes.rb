@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :contractors
   resources :works
   resources :data_managers, only: [:index]
+  resources :comments
   root 'home#index'
 end
