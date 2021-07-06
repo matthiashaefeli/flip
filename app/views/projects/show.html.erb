@@ -4,11 +4,7 @@
   <p>Address: <%= @project.address %></p>
   <p>Status: <%= @project.status %></p>
   <p>Comments and files:</p>
-  <ul>
-    <% @project.comments.each do |comment| %>
-      <li><%= comment.content %></li>
-    <% end %>
-  </ul>
+  <%= render template: 'comments/index', :locals => { :object => @project } %>
   <%= render 'comments/form' %>
   <%= render 'conditions/index' %>
   <%= render 'finances/index' %>
