@@ -1,5 +1,6 @@
 <%= form_with model: @comment do |form| %>
   <div class="field">
+    <%= form.text_field :title, placeholder: 'Title' %>
     <%= form.rich_text_area :content %>
   </div>
   <%= form.submit %>
