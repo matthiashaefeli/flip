@@ -12,9 +12,17 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    # change this to get the path of each object. for now we only use comment with object
+    comment = Comment.find(params[:id])
+    project = comment.commentable
+    comment.delete
+    redirect_to project_path(project)
+  end
+
   private
 
   def comment_params
-    params.require(:comment).permit(:content, :project)
+    params.require(:comment).permit(:content, :project, :title)
   end
 end

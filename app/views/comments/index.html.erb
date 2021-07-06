@@ -1,0 +1,7 @@
+<% object.comments.each do |comment| %>
+  <div>
+    <%= comment.title %>:
+    <%= comment.content %>
+    <%= link_to 'delete', comment_path(comment), method: 'delete' %>
+  </div>
+<% end %>
