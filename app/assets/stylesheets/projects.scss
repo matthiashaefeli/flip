@@ -3,6 +3,26 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .project_home {
   text-align: center;
+  padding-top: 50px;
+}
+
+.project_header {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.project_body {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  width: 50%;
+  margin: auto;
 }
 
 .project_form {

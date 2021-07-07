@@ -1,6 +1,8 @@
 <%= form_with model: @finance do |form| %>
-  <%= form.text_field :name, placeholder: 'Name' %>
-  <%= form.select(:ftype, Finance.ftypes.keys) %>
-  <%= form.submit %>
+  <div class='form_fields'>
+    <div><%= form.text_field :name, placeholder: 'Name' %></div>
+    <div><%= form.select(:ftype, Finance.ftypes.keys) %></div>
+    <div><%= form.submit %></div>
+  </div>
   <%= form.hidden_field :project_id, value: @project.id %>
 <% end %>
