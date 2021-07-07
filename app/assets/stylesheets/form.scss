@@ -1,0 +1,15 @@
+.form {
+  padding-top: 50px;
+  width: 70vw;
+  margin: auto;
+}
+
+.form_fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    margin: 10px;
+  }
+}

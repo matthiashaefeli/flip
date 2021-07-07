@@ -1,4 +1,11 @@
 class CommentsController < ApplicationController
+
+  def new
+    @object_type = params[:object].constantize
+    @object = @object_type.find(params[:object_id])
+    @comment = Comment.new
+  end
+
   def create
     @comment = Comment.new(comment_params)
     project = Project.find(params[:comment][:project_id])

@@ -1,14 +1,21 @@
- <div class='project_home'> 
-  <p>Name: <%= @project.name %></p>
-  <p>Type: <%= @project.project_type.name %></p>
-  <p>Address: <%= @project.address %></p>
-  <p>Status: <%= @project.status %></p>
-  <p>Comments and files:</p>
-  <%= render template: 'comments/index', :locals => { :object => @project } %>
-  <%= render 'comments/form' %>
-  <%= render 'conditions/index' %>
-  <%= render 'finances/index' %>
-  <%= render 'materials/index' %>
-  <%= link_to 'edit project', edit_project_path %>
-  <%= link_to 'delete project', project_path, method: 'delete' %>
+<div class='project_home'>
+  <div class='project_header'>
+    <div>Name: <%= @project.name %></div>
+    <div>Type: <%= @project.project_type.name %></div>
+    <div>Address: <%= @project.address %></div>
+    <div>Status: <%= @project.status %></div>
+  </div>
+  <div class='line'><hr></div>
+  <div class='project_body'>
+    <div><%= render template: 'comments/index', :locals => { :object => @project } %></div>
+    <div><%= link_to 'new Comment', new_comment_path(object: 'Project', object_id: @project.id) %></div>
+    <div class='line'><hr></div>
+    <div><%= render template: 'conditions/index' %></div>
+    <div class='line'><hr></div>
+    <div><%= render template: 'finances/index' %></div>
+    <div class='line'><hr></div>
+    <div><%= render template: 'materials/index' %></div>
+    <div class='line'><hr></div>
+    <div><%= link_to 'edit project', edit_project_path %> | <%= link_to 'delete project', project_path, method: 'delete' %></div>
+  </div>
 </div>
