@@ -1,26 +1,28 @@
-<h1>Realtors</h1>
-<%= link_to 'new realtor', new_realtor_path %>
-<table>
-  <thead>
-    <tr>
-      <td>Name</td>
-      <td>Tel1</td>
-      <td>Tel2</td>
-      <td>Tel3</td>
-      <td>Address</td>
-      <td>Company</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @realtors.each do |realtor| %>
+<div class='realtor_home'>
+  <h1>Realtors</h1>
+  <%= link_to 'new realtor', new_realtor_path %>
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to realtor.name, realtor_path(realtor) %></td>
-        <td><%= realtor.telephone1 %></td>
-        <td><%= realtor.telephone2 %></td>
-        <td><%= realtor.telephone1 %></td>
-        <td><%= realtor.address %></td>
-        <td><%= realtor.company %></td>
+        <td>Name</td>
+        <td>Tel1</td>
+        <td>Tel2</td>
+        <td>Tel3</td>
+        <td>Address</td>
+        <td>Company</td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @realtors.each do |realtor| %>
+        <tr>
+          <td><%= link_to realtor.name, realtor_path(realtor) %></td>
+          <td><%= realtor.telephone1 %></td>
+          <td><%= realtor.telephone2 %></td>
+          <td><%= realtor.telephone1 %></td>
+          <td><%= realtor.address %></td>
+          <td><%= realtor.company %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

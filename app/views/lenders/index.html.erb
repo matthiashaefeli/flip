@@ -1,26 +1,28 @@
-<h1>Providers</h1>
-<%= link_to 'new lender', new_lender_path %>
-<table>
-  <thead>
-    <tr>
-      <td>Name</td>
-      <td>Tel1</td>
-      <td>Tel2</td>
-      <td>Tel3</td>
-      <td>Address</td>
-      <td>Type</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @lenders.each do |lender| %>
+<div class='lender_home'>
+  <h1>Providers</h1>
+  <%= link_to 'new lender', new_lender_path %>
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to lender.name, lender_path(lender) %></td>
-        <td><%= lender.telephone1 %></td>
-        <td><%= lender.telephone2 %></td>
-        <td><%= lender.telephone1 %></td>
-        <td><%= lender.address %></td>
-        <td><%= lender.ltype %></td>
+        <td>Name</td>
+        <td>Tel1</td>
+        <td>Tel2</td>
+        <td>Tel3</td>
+        <td>Address</td>
+        <td>Type</td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @lenders.each do |lender| %>
+        <tr>
+          <td><%= link_to lender.name, lender_path(lender) %></td>
+          <td><%= lender.telephone1 %></td>
+          <td><%= lender.telephone2 %></td>
+          <td><%= lender.telephone1 %></td>
+          <td><%= lender.address %></td>
+          <td><%= lender.ltype %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
