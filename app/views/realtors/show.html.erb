@@ -1,8 +1,10 @@
-<h1><%= @realtor.name %></h1>
-<p>Address: <%= @realtor.address %></p>
-<p>Telephone1: <%= @realtor.telephone1 %></p>
-<p>Telephone2: <%= @realtor.telephone2 %></p>
-<p>Telephone3: <%= @realtor.telephone3 %></p>
-<p>Company: <%= @realtor.company %></p>
-<%= link_to 'edit', edit_realtor_path(@realtor) %>
-<%= link_to 'delete', realtor_path(@realtor), method: 'delete' %>
+<div class=''>
+  <h1><%= @realtor.name %></h1>
+  <p>Address: <%= @realtor.address %></p>
+  <p>Telephone1: <%= @realtor.telephone1 %></p>
+  <p>Telephone2: <%= @realtor.telephone2 %></p>
+  <p>Telephone3: <%= @realtor.telephone3 %></p>
+  <p>Company: <%= @realtor.company %></p>
+  <%= link_to 'edit', edit_realtor_path(@realtor) %>
+  <%= link_to 'delete', realtor_path(@realtor), method: 'delete' %>
+</div>

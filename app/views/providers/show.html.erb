@@ -1,8 +1,10 @@
-<h1><%= @provider.name %></h1>
-<p>Address: <%= @provider.address %></p>
-<p>Telephone1: <%= @provider.telephone1 %></p>
-<p>Telephone2: <%= @provider.telephone2 %></p>
-<p>Telephone3: <%= @provider.telephone3 %></p>
-<p>Status: <%= @provider.status %></p>
-<%= link_to 'edit', edit_provider_path(@provider) %>
-<%= link_to 'delete', provider_path(@provider), method: 'delete' %>
+<div class=''>
+  <h1><%= @provider.name %></h1>
+  <p>Address: <%= @provider.address %></p>
+  <p>Telephone1: <%= @provider.telephone1 %></p>
+  <p>Telephone2: <%= @provider.telephone2 %></p>
+  <p>Telephone3: <%= @provider.telephone3 %></p>
+  <p>Status: <%= @provider.status %></p>
+  <%= link_to 'edit', edit_provider_path(@provider) %>
+  <%= link_to 'delete', provider_path(@provider), method: 'delete' %>
+</div>
