@@ -1,8 +1,10 @@
-<h1><%= @contractor.name %></h1>
-<p>Address: <%= @contractor.address %></p>
-<p>Telephone1: <%= @contractor.telephone1 %></p>
-<p>Telephone2: <%= @contractor.telephone2 %></p>
-<p>Telephone3: <%= @contractor.telephone3 %></p>
-<p>Status: <%= @contractor.status %></p>
-<%= link_to 'edit', edit_contractor_path(@contractor) %>
-<%= link_to 'delete', contractor_path(@contractor), method: 'delete' %>
+<div class=''>
+  <h1><%= @contractor.name %></h1>
+  <p>Address: <%= @contractor.address %></p>
+  <p>Telephone1: <%= @contractor.telephone1 %></p>
+  <p>Telephone2: <%= @contractor.telephone2 %></p>
+  <p>Telephone3: <%= @contractor.telephone3 %></p>
+  <p>Status: <%= @contractor.status %></p>
+  <%= link_to 'edit', edit_contractor_path(@contractor) %>
+  <%= link_to 'delete', contractor_path(@contractor), method: 'delete' %>
+</div>
