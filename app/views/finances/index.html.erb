@@ -5,18 +5,20 @@
     <tr>
       <td>Name</td>
       <td>Type</td>
+      <td>Qty</td>
       <td>Edit</td>
       <td>Delete</td>
     </tr>
   </thead>
   <tbody>
-    <tr>
     <% @project.finances.each do |finance| %>
-      <td><%= finance.name %></td>
-      <td><%= finance.ftype %></td>
-      <td><%= link_to 'edit', edit_finance_path(finance) %></td>
-      <td><%= link_to 'delete', finance_path(finance), method: "delete" %></td>
+      <tr>
+        <td><%= finance.name %></td>
+        <td><%= finance.ftype %></td>
+        <td><%= number_to_currency finance.quantity %></td>
+        <td><%= link_to 'edit', edit_finance_path(finance) %></td>
+        <td><%= link_to 'delete', finance_path(finance), method: "delete" %></td>
+      </tr>
     <% end %>
-    </tr>
   </tbody>
 </table>

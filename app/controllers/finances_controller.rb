@@ -45,7 +45,7 @@ class FinancesController < ApplicationController
   private
 
   def finance_params
-    params.require(:finance).permit(:name, :ftype, :project_id)
+    params.require(:finance).permit(:name, :ftype, :project_id, :quantity)
   end
 
   def set_finance

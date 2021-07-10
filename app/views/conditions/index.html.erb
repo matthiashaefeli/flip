@@ -6,17 +6,15 @@
       <td>Name</td>
       <td>Status</td>
       <td>Initial Condition</td>
-      <td>Edit</td>
-      <td>Delete</td>
     </tr>
   </thead>
   <tbody>
-    <tr>
     <% @project.conditions.each do |condition| %>
-      <td><%= link_to condition.name, condition_path(condition) %></td>
-      <td><%= condition.status %></td>
-      <td><%= condition.initial_condition %></td>
+      <tr>
+        <td><%= link_to condition.name, condition_path(condition) %></td>
+        <td><%= condition.status %></td>
+        <td><%= condition.initial_condition %></td>
+      </tr>
     <% end %>
-    </tr>
   </tbody>
 </table>
