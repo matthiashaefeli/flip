@@ -1,32 +1,34 @@
-<br>
-<p>Name: <%= @condition.name %></p>
-<p>Initial Condition: <%= @condition.initial_condition %></p>
-<p>Status: <%= @condition.status %></p>
+<div class='condition_show'>
+  <br>
+  <p>Name: <%= @condition.name %></p>
+  <p>Initial Condition: <%= @condition.initial_condition %></p>
+  <p>Status: <%= @condition.status %></p>
 
-<%= link_to 'New work', new_work_path(condition: @condition) %>
-<table>
-  <thead>
-    <tr>
-      <td>Description</td>
-      <td>Contractor</td>
-      <td>status</td>
-      <td>Started at</td>
-      <td>Finished at</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @condition.works.each do |work| %>
+  <%= link_to 'New work', new_work_path(condition: @condition) %>
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to work.name, work_path(work) %></td>
-        <td><%= link_to work.contractor.name, contractor_path(work.contractor) %></td>
-        <td><%= work.status %></td>
-        <td><%= work.started_at %></td>
-        <td><%= work.finished_at %></td>
+        <td>Description</td>
+        <td>Contractor</td>
+        <td>status</td>
+        <td>Started at</td>
+        <td>Finished at</td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @condition.works.each do |work| %>
+        <tr>
+          <td><%= link_to work.name, work_path(work) %></td>
+          <td><%= link_to work.contractor.name, contractor_path(work.contractor) %></td>
+          <td><%= work.status %></td>
+          <td><%= work.started_at %></td>
+          <td><%= work.finished_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
 
-<p><%= link_to 'edit', edit_condition_path(@condition) %></p>
-<p><%= link_to 'delete', condition_path(@condition), method: "delete" %></p>
+  <p><%= link_to 'edit', edit_condition_path(@condition) %></p>
+  <p><%= link_to 'delete', condition_path(@condition), method: "delete" %></p>
+</div>
