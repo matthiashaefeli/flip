@@ -2,6 +2,7 @@
   <div class='form_fields'>
     <div><%= form.text_field :name, placeholder: 'Name' %></div>
     <div><%= form.select(:ftype, Finance.ftypes.keys) %></div>
+    <div><%= form.number_field :quantity, placeholder: 'qty', step: 0.01 %></div>
     <div><%= form.submit %></div>
   </div>
   <%= form.hidden_field :project_id, value: @project.id %>

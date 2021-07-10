@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 2021_07_05_203819) do
     t.integer "project_id"
     t.string "name"
     t.integer "ftype"
+    t.decimal "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

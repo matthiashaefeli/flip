@@ -4,6 +4,7 @@ class CreateFinances < ActiveRecord::Migration[6.1]
       t.integer :project_id
       t.string :name
       t.integer :ftype
+      t.decimal :quantity
 
       t.timestamps
     end
